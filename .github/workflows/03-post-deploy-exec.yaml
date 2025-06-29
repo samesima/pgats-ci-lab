@@ -9,7 +9,7 @@ name: 'Execução por Deploy'
 
 on:
   workflow_run: ['Execução Manual']
-  type: 
+  types: 
     - completed
 
 # trabalhos/tarefas dentro do pipeline = jobs
