@@ -16,9 +16,15 @@ on:
 # trabalhos/tarefas dentro do pipeline = jobs
 jobs:
   e2e-tests:
+
     # definir qual máquina que o job vai executar
-    # pode ser uma máquina controlada por mim ou pelo github
     runs-on: ubuntu-latest
+
+    # condicional - if
+    # `${ expressao }` <- usado no JS
+    # == comparação
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
 
     # passos do script de buil
     steps:
