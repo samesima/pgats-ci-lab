@@ -18,7 +18,7 @@ jobs:
 
     # passos do script de buil
     steps:
-      # clone do projeto 
+      # clone do projeto
       - uses: actions/checkout@v4
 
       # instalacao do node
@@ -33,7 +33,7 @@ jobs:
       #instacao das dependencias
       - name: Instalando dependencias
         run: yarn
-      
+
       # instalacao do Playwright
       - name: Instalando Playwright
         run: yarn playwright install
