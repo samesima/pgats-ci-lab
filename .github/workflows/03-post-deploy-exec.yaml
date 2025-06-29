@@ -1,16 +1,18 @@
 # CI de Nível 03 - Disparo após a conclusão de um pipeline
+
 # nome do nosso 'pipeline'
 name: 'Execução por Deploy'
 
 # regras de disparo (gatilhos/triggers)
 # gatilho de exec manual = workflow_dispatch
-# gatilho de exec agendada = schedule
+# gatinho de exec agendada = schedule
 # gatilho de exec a partir de outro pipe = workflow_run
 
 on:
-  workflow_run: ['Execução Manual']
-  types: 
-    - completed
+  workflow_run:
+    workflow: ['Execução Manual']
+    types:
+      - completed
 
 # trabalhos/tarefas dentro do pipeline = jobs
 jobs:
